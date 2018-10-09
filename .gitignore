@@ -1,0 +1,20 @@
+# Idea
+*.iml
+/.idea/
+
+*/target/
+
+.DS_Store
+.directory
+*.log
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# Maven target directory
+target/
+
+*.jar
+
+# Find bugs configuration file
+/.fbprefs
