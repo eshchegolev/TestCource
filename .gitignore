@@ -16,5 +16,9 @@ target/
 
 *.jar
 
+cache/
+
+/public/*.properties
+
 # Find bugs configuration file
 /.fbprefs
