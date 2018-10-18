@@ -1,4 +1,4 @@
-package pack;
+package org.acs.domain.model;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -8,12 +8,12 @@ import java.util.Collection;
  * */
 @Entity
 public class VirtualUser extends User {
+    @OneToOne
+    Authentification auth;
     @Enumerated(EnumType.ORDINAL)
     private Role role;
     @Transient
     private Collection<? extends GrantedAuthority> grantedAuthorities;
-    @OneToOne
-    Authentification auth;
 
     public Role getRole() {
         return role;

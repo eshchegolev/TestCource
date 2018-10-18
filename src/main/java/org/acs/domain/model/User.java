@@ -1,7 +1,9 @@
-package pack;
+package org.acs.domain.model;
 
-import javax.persistence.*;
-import java.util.Collection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 /**
  * Суперкласс для Worker, Visitor, VirtualUser

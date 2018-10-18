@@ -1,4 +1,4 @@
-package pack;
+package org.acs.domain.model;
 
 /**
  * Перечисление для ролей, используется VirtualUser' ом.
