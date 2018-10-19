@@ -1,16 +1,19 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
  * Сущность хранит время выхода
  * */
 @Entity
+@Table(name = "exittime")
 public class ExitTime {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "exit")
     private Timestamp exitTime;
 
     public long getId() {

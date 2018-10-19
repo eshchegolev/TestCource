@@ -1,17 +1,21 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Сущность хранит логин и пароль, необходимый сущности VirtualUser
  * для получения ролей.
  * */
 @Entity
+@Table(name = "auth")
 public class Authentification {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "login")
     private String login;
+    @Column(name = "password")
     private String password;
 
     public long getId() {

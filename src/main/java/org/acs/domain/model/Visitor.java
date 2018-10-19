@@ -1,18 +1,19 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Сущность хранит список времени входа/выхода
  * */
 @Entity
+@Table(name = "visitor")
 public class Visitor extends User {
+    @Column(name = "inside")
     private boolean isInside;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<EnterTime> enterTimes;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ExitTime> exitTime;
 
     public boolean isInside() {

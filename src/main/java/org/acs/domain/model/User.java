@@ -1,9 +1,6 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 /**
  * Суперкласс для Worker, Visitor, VirtualUser
@@ -12,9 +9,14 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "fname")
     private String firstName;
+    @Column(name = "mname")
     private String middleName;
+    @Column(name = "lname")
     private String lastName;
 
     public long getId() {

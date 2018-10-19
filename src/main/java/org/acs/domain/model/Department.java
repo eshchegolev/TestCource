@@ -1,8 +1,6 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -10,11 +8,15 @@ import java.util.List;
  * список рабочих в департаменте.
  * */
 @Entity
+@Table(name = "dept")
 public class Department {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "name")
     private String name;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Worker> users;
 
     public long getId() {

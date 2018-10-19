@@ -1,16 +1,19 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
  * Сущность хранит время входа
  * */
 @Entity
+@Table(name = "entertime")
 public class EnterTime {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "enter")
     private Timestamp enterTime;
 
     public long getId() {

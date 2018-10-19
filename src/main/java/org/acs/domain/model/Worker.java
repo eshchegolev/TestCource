@@ -1,9 +1,6 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -11,16 +8,19 @@ import java.util.List;
  * список времени входа/выхода.
  * */
 @Entity
+@Table(name = "worker")
 public class Worker extends User {
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Department department;
+    @Column(name = "position")
     private String position;
+    @Column(name = "inside")
     private boolean isInside;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Schedule schedule;
-    @OneToMany
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<EnterTime> enterTimes;
-    @OneToMany
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ExitTime> exitTime;
 
     public Department getDepartment() {

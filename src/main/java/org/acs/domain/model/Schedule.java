@@ -1,7 +1,6 @@
 package org.acs.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -10,11 +9,17 @@ import java.util.Date;
  * Используется Worker' ом.
  * */
 @Entity
+@Table(name = "schedule")
 public class Schedule {
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "date")
     private Date date;
+    @Column(name = "start_duty")
     private Timestamp startOfDuty;
+    @Column(name = "end_duty")
     private Timestamp endOfDuty;
 
     public long getId() {
