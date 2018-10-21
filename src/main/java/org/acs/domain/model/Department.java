@@ -16,7 +16,7 @@ public class Department {
     private long id;
     @Column(name = "name")
     private String name;
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Worker> users;
 
     public long getId() {

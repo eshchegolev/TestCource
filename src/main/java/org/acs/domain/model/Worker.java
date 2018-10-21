@@ -16,11 +16,11 @@ public class Worker extends User {
     private String position;
     @Column(name = "inside")
     private boolean isInside;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private Schedule schedule;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private List<EnterTime> enterTimes;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private List<ExitTime> exitTime;
 
     public Department getDepartment() {

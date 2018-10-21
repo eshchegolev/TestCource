@@ -11,9 +11,9 @@ import java.util.List;
 public class Visitor extends User {
     @Column(name = "inside")
     private boolean isInside;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<EnterTime> enterTimes;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<ExitTime> exitTime;
 
     public boolean isInside() {

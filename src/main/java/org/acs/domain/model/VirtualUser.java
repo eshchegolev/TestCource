@@ -9,7 +9,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "virtual_user")
 public class VirtualUser extends User {
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     Authentification auth;
     @Enumerated(EnumType.ORDINAL)
     private Role role;
