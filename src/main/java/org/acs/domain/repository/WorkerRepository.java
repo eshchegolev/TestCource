@@ -28,7 +28,7 @@ public interface WorkerRepository {
      * @return true - if a worker with the specifiec id are deleted,
      * false - if there aren't the worker with the cpecifiec id in the DB.
      */
-    boolean delete(int id);
+    boolean delete(long id);
 
     /**
      * Returnes a worker with the cpecifiec id.
@@ -37,7 +37,7 @@ public interface WorkerRepository {
      * @return a worker with the cpecifiec id,
      * null - if there aren't worker with cpecifiec id  in the DB.
      */
-    Worker get(int id);
+    Worker get(long id);
 
     /**
      * Returnes list with all workers.
@@ -51,5 +51,5 @@ public interface WorkerRepository {
      *
      * @return list with all workers by deparmetnt's id.
      */
-    List<Worker> getAllByDepId(int depId);
+    List<Worker> getAllByDepId(long depId);
 }

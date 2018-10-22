@@ -28,7 +28,7 @@ public interface DepartmentRepository {
      * @return true - if a department with the specifiec id are deleted,
      * false - if there aren't the department with the cpecifiec id in the DB.
      */
-    boolean delete(int id);
+    boolean delete(long id);
 
     /**
      * Returnes a department with the cpecifiec id.
@@ -37,7 +37,7 @@ public interface DepartmentRepository {
      * @return a department with the cpecifiec id,
      * null - if there aren't department with cpecifiec id in the DB.
      */
-    Department get(int id);
+    Department get(long id);
 
     /**
      * Returnes list with all departments.

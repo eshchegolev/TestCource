@@ -27,7 +27,7 @@ public interface ScheduleRepository {
      * @return true - if a schedule with the specifiec id are deleted,
      * false - if there aren't the schedule with the cpecifiec id in the DB.
      */
-    boolean delete(int id);
+    boolean delete(long id);
 
     /**
      * Returnes a schedule with the cpecifiec id.
@@ -36,7 +36,7 @@ public interface ScheduleRepository {
      * @return a schedule with the cpecifiec id,
      * null - if there aren't schedule with cpecifiec id  in the DB.
      */
-    Schedule get(int id);
+    Schedule get(long id);
 
     /**
      * Returnes list with all schedules.

@@ -27,7 +27,7 @@ public interface VisitorRepository {
      * @return true - if a visitor with the specifiec id are deleted,
      * false - if there aren't the visitor with the cpecifiec id in the DB.
      */
-    boolean delete(int id);
+    boolean delete(long id);
 
     /**
      * Returnes a visitor with the cpecifiec id.
@@ -36,7 +36,7 @@ public interface VisitorRepository {
      * @return a visitor with the cpecifiec id,
      * null - if there aren't visitor with cpecifiec id  in the DB.
      */
-    Visitor get(int id);
+    Visitor get(long id);
 
     /**
      * Returnes list with all visitors.
